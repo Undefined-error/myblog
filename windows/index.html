@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	
+	<!-- <script src="https://aframe.io/releases/1.0.4/aframe.min.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- <script src="js/three.min.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script> -->
+	<!-- <script src="js/ar-nft.js"></script> -->
+	<!-- <script src="js/aframe-ar-nft.js" type="text/javascript" charset="utf-8"></script> -->
+	<style>
+	  .arjs-loader {
+	    height: 100%;
+	    width: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    background-color: rgba(0, 0, 0, 0.8);
+	    z-index: 9999;
+	    display: flex;
+	    justify-content: center;
+	    align-items: center;
+	  }
+	
+	  .arjs-loader div {
+	    text-align: center;
+	    font-size: 1.25em;
+	    color: white;
+	  }
+	</style>
+	<body>
+		<div id="myxml"></div>
+		<div id="hh">哈哈哈</div>
+		<button  type="button">设置颜色</button>
+	</body>
+	<script type="text/javascript">
+	 let hh = document.querySelector('#hh');
+	 console.log(hh);
+		navigator.mediaDevices.enumerateDevices().then(function (devices) {
+		    var camreass=[];
+			var txt = ""
+		    devices.forEach(function(e){
+		        console.log(e)
+				txt = e
+		        if(e.kind=="videoinput")
+		        {
+		            camreass.push(e.deviceId)
+		        }
+		    })
+			hh.innerHTML = JSON.stringify(txt)
+		    // alert(camreass)
+		    // var userMediaConstraints = {
+		    //     audio: false,
+		    //     video: {
+		    //         facingMode: 'environment',
+		    //         deviceId:camreass[1],
+		    //         width: {
+		    //             ideal: this.parameters.sourceWidth,
+		    //             // min: 1024,
+		    //             // max: 1920
+		    //         },
+		    //         height: {
+		    //             ideal: this.parameters.sourceHeight,
+		    //             // min: 776,
+		    //             // max: 1080
+		    //         }
+		    //     }
+		    // }
+		})
+	</script>
+
+	<!-- <script type="text/javascript">
+		function Node(val) {
+			this.value = val;
+			this.next = null;
+		}
+
+
+		function createList(arr) {
+			let head = new Node(arr[0]);
+			let tail = head;
+			for (let i = 1; i <= arr.length - 1; i++) {
+				tail.next = new Node(arr[i]);
+				tail = tail.next;
+			}
+			return head;
+		}
+
+		function reverseList(head) {
+			// 1.遍历链表,把链表里面的每个值都拿下来并缓存
+			// (在这里我存的节点的值,而不是存整个节点,这样是可以节约内存的)
+			let arr = []; //arr用于储存链表的节点的值
+			let p = head; //p用于遍历链表
+			while (p) {
+				arr.push(p.value);
+				p = p.next;
+			}
+			// 2.再次遍历列表,将数组里面的值倒序的赋值给每一个节点的value域就实现了链表的反转
+			// (这里我并没有考虑新建一个链表,而是用了原来的链表,可以节约创建新链表的时间和内存)
+			p = head;
+			while (p) {
+				p.value = arr.pop();
+				p = p.next;
+			}
+			return head;
+		}
+
+		let linkedList = createList([1, 2, 3, 4, 5])
+		let linkedList2 = createList([1, 2, 3, 4, 5])
+		let reservesLinkedList = reverseList(linkedList);
+		console.log(linkedList2);
+		console.log(reservesLinkedList);
+
+		function setAction() {
+			let hh = document.querySelector("#hh");
+			setStyle(hh)
+		}
+
+		function isDom(obj) {
+			return !!(obj && (obj.nodeType == 1 || obj.nodeType == 9));
+		}
+
+		function setStyle(element) {
+			let is_dom = isDom(element);
+			if (is_dom) {
+				element.style.color = '#ff0000';
+				element.style.fontSize = '20px'
+			} else {
+				alert("请输入dom元素")
+			}
+
+		}
+	</script> -->
+	<!-- <script type="text/javascript">
+		var input = document.querySelector('input');
+		var img = document.querySelector('img');
+		input.addEventListener('change', function(e){
+			console.log(e);
+			let files = e.target.files
+			let arr = [];
+			for (var i = 0; i < files.length; i++) {
+				arr.push(getObjectURL(files[i]))
+			}
+			console.log(arr)
+			img.src = arr[0]
+		});
+		function getObjectURL(file) {
+			var url = null ;
+			if (window.createObjectURL!=undefined) { // basic
+				url = window.createObjectURL(file) ;
+			} else if (window.URL!=undefined) { // mozilla(firefox)
+				url = window.URL.createObjectURL(file) ;
+			} else if (window.webkitURL!=undefined) { // webkit or chrome
+				url = window.webkitURL.createObjectURL(file) ;
+			}
+			return url ;
+		}
+	</script> -->
+	<!-- <script src="js/loadxml.js" type="text/javascript" charset="utf-8"></script> -->
+	<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+	<!-- <script type="text/javascript">
+		let a = loadxmlDoc('xml/test.xml');
+		console.log(a);
+		if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+			xmlhttp = new XMLHttpRequest();
+		} else { // code for IE6, IE5
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("GET", "xml/test.xml", false);
+		xmlhttp.send();
+		xmlDoc = xmlhttp.responseXML;
+		// function displayCD()
+		// {
+		// 	let x = 0
+		// 	for (let i = 0; i < 20; i++) {
+		// 		x = i+1
+		// 		let str = `<book name="${i}本书"></book>`
+		// 		var newNode=xmlDoc.createElement("book");//创建元素节点
+		// 		var newtext=xmlDoc.createTextNode(`${x}本书`);
+		// 		newNode.setAttribute("name",`我是文本：${x}`);
+		// 		newNode.appendChild(newtext);//在操作XHTML时, 上面这两行可直接用edition.innerHTML=’ this is first’代替;
+		// 		var nodeBook =xmlDoc.getElementsByTagName("bookstore")[0];//找到节点book
+		// 		nodeBook.appendChild(newNode);//把newNode作为子节点追加到父节点book的子节点后面。也就是说，要追加节点，必须先找到父节点。
+		// 	}
+		// 	//获取节点的文本值<book>x本书<book> 结果为:"x本书"
+		// 	console.log(xmlDoc.getElementsByTagName("book")[0].childNodes[0].nodeValue);
+		// 	console.log(xmlDoc);
+		// }
+		let max = 20
+		let x = 0
+		let myxml = document.querySelector('#myxml');
+		function addElement() {
+			for (let i = x; i < max; i++) {
+				x = i + 1
+				let str = `<book name="${i}本书"></book>`
+				var newNode = xmlDoc.createElement("book"); //创建元素节点
+				var newtext = xmlDoc.createTextNode(`${x}本书`);
+				newNode.setAttribute("name", `我是文本：${x}`);
+				newNode.appendChild(newtext); //在操作XHTML时, 上面这两行可直接用edition.innerHTML=’ this is first’代替;
+				var nodeBook = xmlDoc.getElementsByTagName("bookstore")[0]; //找到节点book
+				nodeBook.appendChild(newNode); //把newNode作为子节点追加到父节点book的子节点后面。也就是说，要追加节点，必须先找到父节点。
+			}
+			max += x
+			//获取节点的文本值<book>x本书<book> 结果为:"x本书"
+			console.log(xmlDoc.getElementsByTagName("bookstore"));
+			// console.log(xmlDoc.getElementsByTagName("bookstore")[0].innerHTML);
+			// myxml.innerHTML = '<h1 style="color: orange;">哈哈哈哈</h1>'
+			// myxml.innerText = ''
+			// myxml.innerText = xmlDoc.getElementsByTagName("bookstore")[0].innerHTML
+		}
+	</script> -->
+</html>

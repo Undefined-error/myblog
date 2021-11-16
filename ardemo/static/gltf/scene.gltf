@@ -1,0 +1,397 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3788,
+      "max": [
+        0.46593001484870911,
+        0.40726000070571899,
+        0.53675001859664917
+      ],
+      "min": [
+        -0.46593001484870911,
+        -0.49325001239776611,
+        -0.61748999357223511
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 45456,
+      "componentType": 5126,
+      "count": 3788,
+      "max": [
+        0.99942487478256226,
+        0.99994069337844849,
+        0.99971610307693481
+      ],
+      "min": [
+        -0.99942487478256226,
+        -0.99979597330093384,
+        -0.99966037273406982
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3788,
+      "max": [
+        0.99921458959579468,
+        0.99969887733459473,
+        0.99994063377380371,
+        1
+      ],
+      "min": [
+        -0.99921447038650513,
+        -0.99971604347229004,
+        -0.99782490730285645,
+        -1
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3788,
+      "max": [
+        0.99500000476837158,
+        0.98856997489929199
+      ],
+      "min": [
+        0.004999999888241291,
+        0.004999999888241291
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 15798,
+      "max": [
+        3787
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "generator": "Sketchfab (OSG glTF plugin)",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 63192,
+      "byteOffset": 0,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 30304,
+      "byteOffset": 63192,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 90912,
+      "byteOffset": 93496,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 60608,
+      "byteOffset": 184408,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 245016,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "extensionsUsed": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "images": [
+    {
+      "uri": "textures/EXODIA_occlusion.jpg"
+    },
+    {
+      "uri": "textures/EXODIA_diffuse.jpg"
+    },
+    {
+      "uri": "textures/EXODIA_specularGlossiness.png"
+    },
+    {
+      "uri": "textures/EXODIA_normal.jpg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": false,
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "extensions": {
+        "KHR_materials_pbrSpecularGlossiness": {
+          "diffuseFactor": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "diffuseTexture": {
+            "index": 1,
+            "texCoord": 0
+          },
+          "glossinessFactor": 1,
+          "specularFactor": [
+            0.29999999999999999,
+            0.29999999999999999,
+            0.29999999999999999
+          ],
+          "specularGlossinessTexture": {
+            "index": 2,
+            "texCoord": 0
+          }
+        }
+      },
+      "name": "EXODIA",
+      "normalTexture": {
+        "index": 3,
+        "scale": 1,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 0,
+        "strength": 1,
+        "texCoord": 0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "EXODIA ld",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "name": "RootNode (gltf orientation matrix)",
+      "rotation": [
+        -0.70710678118654746,
+        -0,
+        -0,
+        0.70710678118654757
+      ]
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "RootNode (model correction matrix)"
+    },
+    {
+      "children": [
+        3,
+        5,
+        7,
+        9,
+        11
+      ],
+      "name": "Root"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.99999000000000005,
+        -0.003700000000000001,
+        -0,
+        0,
+        0.0035000000000000009,
+        0.94549000000000005,
+        0.32563000000000003,
+        0,
+        -0.0012100000000000004,
+        -0.32563000000000003,
+        0.94550000000000001,
+        0,
+        -0.088110000000000022,
+        -0.82561000000000007,
+        1.2753899999999998,
+        1
+      ],
+      "name": "LAMP"
+    },
+    {
+      "name": "LAMP"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        0.99624999999999997,
+        -0.086580000000000018,
+        0,
+        0,
+        0.013690000000000003,
+        0.15753000000000003,
+        0.98741999999999996,
+        0,
+        -0.085490000000000024,
+        -0.98370999999999997,
+        0.15813000000000002,
+        0,
+        -0.19144000000000005,
+        -1.49817,
+        -0.095990000000000034,
+        1
+      ],
+      "name": "HEMIF"
+    },
+    {
+      "name": "HEMIF"
+    },
+    {
+      "children": [
+        8
+      ],
+      "matrix": [
+        0.26369999999999999,
+        -0.96461000000000008,
+        -0,
+        0,
+        0.46960000000000002,
+        0.12837999999999999,
+        0.87350000000000005,
+        0,
+        -0.84258,
+        -0.23034000000000002,
+        0.48683000000000004,
+        0,
+        -0.76505000000000012,
+        -0.47181000000000006,
+        0.10147,
+        1
+      ],
+      "name": "HEMID"
+    },
+    {
+      "name": "HEMID"
+    },
+    {
+      "children": [
+        10
+      ],
+      "matrix": [
+        -0.74873000000000012,
+        0.66287000000000018,
+        0,
+        0,
+        0.04370000000000001,
+        0.049360000000000008,
+        0.99782000000000004,
+        0,
+        0.66143000000000007,
+        0.7471000000000001,
+        -0.06592000000000002,
+        0,
+        1.10839,
+        1.06301,
+        -0.40986000000000006,
+        1
+      ],
+      "name": "HEMIB"
+    },
+    {
+      "name": "HEMIB"
+    },
+    {
+      "children": [
+        12
+      ],
+      "name": "EXODIA ld"
+    },
+    {
+      "children": [
+        13
+      ],
+      "name": "Geode"
+    },
+    {
+      "mesh": 0,
+      "name": "EXODIA ld"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "OSG_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    }
+  ]
+}
+
